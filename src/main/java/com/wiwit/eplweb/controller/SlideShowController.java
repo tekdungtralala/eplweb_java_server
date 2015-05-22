@@ -57,7 +57,7 @@ public class SlideShowController extends BaseController {
 		return new ResponseEntity(HttpStatus.OK);
 	}
 
-	// Delte image by imageId
+	// Delete image by imageId
 	@RequestMapping(value = ApiPath.IMAGES, method = RequestMethod.DELETE)
 	@ResponseBody
 	public ResponseEntity deleteImageById(@PathVariable("imageId") int imageId,

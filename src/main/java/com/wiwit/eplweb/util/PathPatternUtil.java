@@ -33,7 +33,7 @@ public class PathPatternUtil {
 		return false;
 	}
 
-	// Get pathpattern by match path and available method
+	// Get PathPattern by match path and available method
 	public static PathPattern getPathPattern(String path, String method) {
 		for (PathPattern p : getAllPath()) {
 			if (path.matches(p.getRequestPattern()) && p.getMethods().contains(method)) {

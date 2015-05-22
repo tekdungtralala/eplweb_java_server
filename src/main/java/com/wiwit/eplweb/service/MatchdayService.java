@@ -93,7 +93,7 @@ public class MatchdayService {
 			mv.setUser(user);
 			mv.setMatchday(matchday);
 		} else {
-			// It is not a new one
+			// It is not a new vote
 
 			// Set flag = false
 			newVotingData = false;

@@ -25,7 +25,6 @@ public class BestWeekSquadService {
 	public List<BestWeekSquad> findBestSquadLastWeek() {
 		int lastWeek = Integer
 				.valueOf(phaseDAO.findCurrentMatchday().getValue()) - 1;
-		// TODO what must we do if last week = 0
 		return this.findBestSquadByWeekId(lastWeek);
 	}
 }

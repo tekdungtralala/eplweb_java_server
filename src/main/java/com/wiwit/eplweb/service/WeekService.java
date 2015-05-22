@@ -37,7 +37,6 @@ public class WeekService {
 
 		// last rank must be on previous week
 		int prevWeek = Integer.valueOf(currentMatchday) - 1;
-		// TODO - check if prevWeek == 0
 		
 		return weekDAO.findAllPassedWeek(prevWeek);
 	}
