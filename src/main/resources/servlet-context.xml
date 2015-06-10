@@ -10,6 +10,7 @@
 	<resources mapping="/" location="/index.html" />
 	<resources mapping="/index.html" location="/index.html" />
 	<resources mapping="/admin.html" location="/admin.html" />
+	<resources mapping="/google29c27a588734a6ce.html" location="/google29c27a588734a6ce.html" />
 
 	<resources mapping="/app/**" location="/app/" />
 	<resources mapping="/eplweb_components/**" location="/eplweb_components/" />
