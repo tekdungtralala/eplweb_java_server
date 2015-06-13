@@ -43,6 +43,8 @@
 			value="jdbc:mysql://localhost:3306/eplweb" />
 		<beans:property name="username" value="root" />
 		<beans:property name="password" value="password" />
+		<beans:property name="validationQuery" value="SELECT 1" />
+		<beans:property name="testOnBorrow" value="true" />
 	</beans:bean>
 
 	<!-- Hibernate 4 SessionFactory Bean definition -->
@@ -72,7 +74,8 @@
 		</beans:property>
 		<beans:property name="hibernateProperties">
 			<beans:props>
-				<beans:prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</beans:prop>
+				<beans:prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect
+				</beans:prop>
 				<beans:prop key="hibernate.show_sql">false</beans:prop>
 				<beans:prop key="hibernate.enable_lazy_load_no_trans">true</beans:prop>
 			</beans:props>
@@ -80,7 +83,8 @@
 	</beans:bean>
 
 	<beans:bean id="personDAO" class="com.wiwit.eplweb.dao.PersonDAO">
-		<beans:property name="sessionFactory" ref="hibernate4AnnotatedSessionFactory" />
+		<beans:property name="sessionFactory"
+			ref="hibernate4AnnotatedSessionFactory" />
 	</beans:bean>
 	<beans:bean id="personService" class="com.wiwit.eplweb.service.PersonService">
 		<beans:property name="personDAO" ref="personDAO"></beans:property>
@@ -90,7 +94,8 @@
 
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
-	<beans:bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+	<beans:bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
 		<beans:property name="sessionFactory"
 			ref="hibernate4AnnotatedSessionFactory" />
 	</beans:bean>
